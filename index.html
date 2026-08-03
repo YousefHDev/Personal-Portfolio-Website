@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yousef Hesham - Node.js Backend Developer</title>
+    <meta name="description" content="Portfolio of Yousef Hesham, a backend-focused software engineer specializing in Node.js, Express, and MongoDB.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Navigation Bar -->
+    <header id="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">YousefHDev<span>.</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text fade-in-up">
+                    <span class="greeting">Hello, I'm</span>
+                    <h1 class="name">Yousef Hesham</h1>
+                    <h2 class="title">Node.js Backend Developer <i class="fa-brands fa-node-js hero-icon"></i></h2>
+                    <p class="description">
+                        Building secure, scalable backend systems with Node.js, Express, and MongoDB.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in-up delay-1">
+                    <div class="glow-circle"></div>
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <pre><code><span class="keyword">const</span> developer = {
+  <span class="property">name</span>: <span class="string">'Yousef Hesham'</span>,
+  <span class="property">role</span>: <span class="string">'Backend Engineer'</span>,
+  <span class="property">skills</span>: [<span class="string">'Node.js'</span>, <span class="string">'Express'</span>, <span class="string">'MongoDB'</span>],
+  <span class="property">passion</span>: <span class="string">'Clean Architecture'</span>
+};
+
+developer.<span class="method">buildScalableSystems</span>();</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image-container fade-in-up">
+                        <div class="about-image">
+                            <img src="image/photo_2024-07-14_18-55-11.jpg" alt="Yousef Hesham" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="about-text fade-in-up delay-1">
+                        <p>Backend-focused software engineer with 2+ year of experience building production-ready systems.</p>
+                        <ul class="achievements">
+                            <li><i class="fas fa-check-circle"></i> Developed <strong>60+ API endpoints</strong> for various applications.</li>
+                            <li><i class="fas fa-check-circle"></i> Built and deployed <strong>3 complete backend systems</strong> from scratch.</li>
+                        </ul>
+                        <p class="philosophy">
+                            <strong>My Philosophy:</strong> I believe in clean architecture, writing secure code, optimizing performance, and building systems that can scale seamlessly.
+                        </p>
+                        <p class="passion">
+                            I am highly passionate about exploring global remote opportunities and collaborating with innovative teams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Technical Skills</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-card fade-in-up">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend</h3>
+                        <p>Node.js, Express.js, Nest.js, RESTful APIs, GraphQL</p>
+                    </div>
+                    
+                    <div class="skill-card fade-in-up delay-1">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3>Database</h3>
+                        <p>MongoDB, MySQL, Mongoose, Schema Design, Query Optimization</p>
+                    </div>
+                    
+                    <div class="skill-card fade-in-up delay-2">
+                        <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Security & Auth</h3>
+                        <p>JWT, RBAC, bcrypt, Helmet, CORS, Rate Limiting</p>
+                    </div>
+                    
+                    <div class="skill-card fade-in-up delay-3">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & Real-time</h3>
+                        <p>Socket.IO, Git, GitHub, Postman, AWS (basic)</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Featured Projects</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card fade-in-up">
+                        <div class="project-content">
+                            <h3>Job Search Platform</h3>
+                            <p>A comprehensive platform connecting job seekers with companies.</p>
+                            <ul class="project-tags">
+                                <li>25+ APIs</li>
+                                <li>3 Roles (Admin/Company/User)</li>
+                                <li>OTP</li>
+                                <li>Real-time chat</li>
+                                <li>Email notifications</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://yousefhdev.github.io/Job-Search-App/" target="_blank" class="btn-text">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in-up delay-1">
+                        <div class="project-content">
+                            <h3>Social Media Backend API</h3>
+                            <p>A robust backend powering a social media application.</p>
+                            <ul class="project-tags">
+                                <li>Modular Architecture</li>
+                                <li>File Upload</li>
+                                <li>GraphQL Dashboard</li>
+                                <li>Auth/Post/Comment</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://yousefhdev.github.io/Social-Media-App/" target="_blank" class="btn-text">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in-up delay-2">
+                        <div class="project-content">
+                            <h3>Saraha (Anonymous Messaging)</h3>
+                            <p>An anonymous messaging platform focused on privacy and security.</p>
+                            <ul class="project-tags">
+                                <li>Anonymous Messaging</li>
+                                <li>JWT Middleware</li>
+                                <li>Validation Layer</li>
+                                <li>Service-Controller Pattern</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://yousefhdev.github.io/Saraha-Anonymous-messages/" target="_blank" class="btn-text">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Experience</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 – Present</span>
+                            <h3>Independent Backend Engineer (Freelance)</h3>
+                            <ul>
+                                <li>Designed and implemented <strong>60+ RESTful endpoints</strong>.</li>
+                                <li>Implemented JWT and Role-Based Access Control (RBAC) for 3 different user roles.</li>
+                                <li>Optimized and improved <strong>10+ MongoDB schemas</strong> for better performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in-up delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 – 2024</span>
+                            <h3>Backend Developer</h3>
+                            <span class="timeline-company">Job Platform Project</span>
+                            <ul>
+                                <li>Implemented the complete employment lifecycle within the backend.</li>
+                                <li>Developed OTP verification and password reset workflows with token expiration.</li>
+                                <li>Secured APIs utilizing Helmet, CORS, and rate limiting mechanisms.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Services</h2>
+                <div class="services-grid">
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3>Backend Architecture</h3>
+                        <p>Modular design and scalable APIs tailored for your business needs.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up delay-1">
+                        <div class="service-icon"><i class="fas fa-lock"></i></div>
+                        <h3>Security & Auth Setup</h3>
+                        <p>Implementing JWT, RBAC, encryption, and best security practices.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up delay-2">
+                        <div class="service-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Real-time Integration</h3>
+                        <p>Socket.IO integration for live chat and real-time data updates.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up delay-3">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <h3>Database Engineering</h3>
+                        <p>MongoDB optimization, schema design, and query indexing.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Objective Section -->
+        <section class="objective section">
+            <div class="container">
+                <div class="objective-card fade-in-up">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <blockquote>
+                        Seeking a Full-Time On-Site backend engineering role where I can leverage my expertise in Node.js, distributed systems, and clean architecture to build high-performance platforms and solve complex challenges at scale.
+                    </blockquote>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Get In Touch</h2>
+                <div class="contact-content">
+                    
+                    <div class="contact-info fade-in-up">
+                        <h3>Connect With Me</h3>
+                        <p>Feel free to reach out for collaborations, remote opportunities, or just to say hi!</p>
+                        
+                        <div class="contact-links">
+                            <a href="mailto:adhamh430@gmail.com" class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <span>adhamh430@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/YousefHDev" target="_blank" class="contact-item">
+                                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                                <span>github.com/YousefHDev</span>
+                            </a>
+                            <a href="https://linkedin.com/in/yousef-hesham-416863319" target="_blank" class="contact-item">
+                                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                                <span>linkedin.com/in/yousef-hesham-416863319</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container fade-in-up delay-1">
+                        <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (UI placeholder)');">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" placeholder="Hello Yousef, I'd like to discuss..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#home">YousefHDev<span>.</span></a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year">2025</span> Yousef Hesham. All rights reserved.
+            </div>
+            <div class="footer-up">
+                <a href="#home" aria-label="Go to top"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
