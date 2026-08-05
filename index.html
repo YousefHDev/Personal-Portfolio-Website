@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yousef Hesham - Node.js Backend Developer</title>
-    <meta name="description" content="Portfolio of Yousef Hesham, a backend-focused software engineer specializing in Node.js, Express, and MongoDB.">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yousef Hesham | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 </head>
-<body class="dark-mode">
-
-    <!-- Navigation Bar -->
-    <header id="header">
-        <nav class="navbar container">
-            <a href="#home" class="logo">YousefHDev<span>.</span></a>
-            
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+<body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home">YH.</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -33,319 +30,567 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            
             <div class="nav-actions">
-                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <button id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="container hero-content">
-                <div class="hero-text fade-in-up">
-                    <span class="greeting">Hello, I'm</span>
-                    <h1 class="name">Yousef Hesham</h1>
-                    <h2 class="title">Node.js Backend Developer <i class="fa-brands fa-node-js hero-icon"></i></h2>
+    <!-- ===== HOME SECTION ===== -->
+    <section id="home">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Available for work
+                    </div>
+                    <p class="greeting">Hi there, I'm</p>
+                    <h1 class="name">
+                        Yousef <span class="highlight">Hesham</span>
+                    </h1>
+                    <h2 class="title">
+                        <span id="typingText">Full Stack Developer</span>
+                        <span class="cursor">|</span>
+                    </h2>
                     <p class="description">
-                        Building secure, scalable backend systems with Node.js, Express, and MongoDB.
+                        Building scalable web applications with JavaScript, Node.js,
+                        React.js, and MongoDB. 2+ years of hands-on experience in
+                        full-stack development.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a
+                            href="https://linkedin.com/in/yousef-hesham-416863319"
+                            target="_blank"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a
+                            href="https://github.com/YousefHDev"
+                            target="_blank"
+                            aria-label="GitHub"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a
+                            href="mailto:adhamh430@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="hero-visual fade-in-up delay-1">
-                    <div class="glow-circle"></div>
-                    <div class="code-window">
-                        <div class="window-header">
+                <div class="hero-visual">
+                    <div class="hero-code-block">
+                        <div class="code-header">
                             <span class="dot red"></span>
                             <span class="dot yellow"></span>
                             <span class="dot green"></span>
+                            <span class="code-title">developer.js</span>
                         </div>
-                        <pre><code><span class="keyword">const</span> developer = {
-  <span class="property">name</span>: <span class="string">'Yousef Hesham'</span>,
-  <span class="property">role</span>: <span class="string">'Backend Engineer'</span>,
-  <span class="property">skills</span>: [<span class="string">'Node.js'</span>, <span class="string">'Express'</span>, <span class="string">'MongoDB'</span>],
-  <span class="property">passion</span>: <span class="string">'Clean Architecture'</span>
-};
-
-developer.<span class="method">buildScalableSystems</span>();</code></pre>
+                        <div class="code-body">
+                            <pre><span class="keyword">const</span> <span class="variable">developer</span> = <span class="brace">{</span>
+    <span class="property">name</span>: <span class="string">"Yousef Hesham"</span>,
+    <span class="property">title</span>: <span class="string">"Full Stack Developer"</span>,
+    <span class="property">experience</span>: <span class="number">2</span>,
+    <span class="property">languages</span>: [<span class="string">"JavaScript"</span>, <span class="string">"HTML"</span>, <span class="string">"CSS"</span>],
+    <span class="property">passion</span>: <span class="string">"Building scalable solutions"</span>
+<span class="brace">}</span></pre>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">About Me</h2>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img
+                            src="image/photo_2024-07-14_18-55-11.jpg"
+                            alt="Yousef Hesham"
+                        />
+                        <div class="image-overlay">
+                            <span>🚀 2+ Years Experience</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="about-content">
-                    <div class="about-image-container fade-in-up">
-                        <div class="about-image">
-                            <img src="image/photo_2024-07-14_18-55-11.jpg" alt="Yousef Hesham" style="width: 100%; height: 100%; object-fit: cover;">
+                    <p class="about-text">
+                        Full Stack JavaScript Developer with <strong>2+ years</strong> of
+                        hands-on experience building scalable web applications using
+                        <strong>Node.js</strong>, <strong>Express.js</strong>,
+                        <strong>React.js</strong>, and <strong>MongoDB</strong>.
+                        Experienced in designing secure RESTful APIs, developing
+                        responsive user interfaces, implementing authentication systems,
+                        and building real-time applications with Socket.IO.
+                    </p>
+                    <p class="about-text">
+                        Skilled in <strong>GraphQL</strong>, clean architecture, and
+                        modern JavaScript development across both frontend and backend.
+                        Proficient in AI-assisted software development using ChatGPT,
+                        Claude AI, and GitHub Copilot.
+                    </p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:adhamh430@gmail.com"
+                            >adhamh430@gmail.com</a
+                            >
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cairo, Egypt</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Sc. Computer Science</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Freelance Full Stack Developer</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+201095419595">+20 109 541 9595</a>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Arabic (Native) · English (Professional)</span>
                         </div>
                     </div>
-                    <div class="about-text fade-in-up delay-1">
-                        <p>Backend-focused software engineer with 2+ year of experience building production-ready systems.</p>
-                        <ul class="achievements">
-                            <li><i class="fas fa-check-circle"></i> Developed <strong>60+ API endpoints</strong> for various applications.</li>
-                            <li><i class="fas fa-check-circle"></i> Built and deployed <strong>3 complete backend systems</strong> from scratch.</li>
-                        </ul>
-                        <p class="philosophy">
-                            <strong>My Philosophy:</strong> I believe in clean architecture, writing secure code, optimizing performance, and building systems that can scale seamlessly.
-                        </p>
-                        <p class="passion">
-                            I am highly passionate about exploring global remote opportunities and collaborating with innovative teams.
-                        </p>
+                    <div class="about-cta">
+                        <a
+                            href="#contact"
+                            class="btn btn-primary"
+                        >
+                            <i class="fas fa-comment"></i> Let's Talk
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">Technical Skills</h2>
-                <div class="skills-grid">
-                    
-                    <div class="skill-card fade-in-up">
-                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-item">
+                        <span>React.js</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript (ES6+)</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>HTML5 &amp; CSS3</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Redux Toolkit</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Tailwind CSS / Bootstrap</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
                         <h3>Backend</h3>
-                        <p>Node.js, Express.js, Nest.js, RESTful APIs, GraphQL</p>
                     </div>
-                    
-                    <div class="skill-card fade-in-up delay-1">
-                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <div class="skill-item">
+                        <span>Node.js</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Express.js</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Nest.js</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>RESTful APIs</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>GraphQL</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
                         <h3>Database</h3>
-                        <p>MongoDB, MySQL, Mongoose, Schema Design, Query Optimization</p>
                     </div>
-                    
-                    <div class="skill-card fade-in-up delay-2">
-                        <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Security & Auth</h3>
-                        <p>JWT, RBAC, bcrypt, Helmet, CORS, Rate Limiting</p>
-                    </div>
-                    
-                    <div class="skill-card fade-in-up delay-3">
-                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                        <h3>Tools & Real-time</h3>
-                        <p>Socket.IO, Git, GitHub, Postman, AWS (basic)</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">Featured Projects</h2>
-                <div class="projects-grid">
-                    
-                    <div class="project-card fade-in-up">
-                        <div class="project-content">
-                            <h3>Job Search Platform</h3>
-                            <p>A comprehensive platform connecting job seekers with companies.</p>
-                            <ul class="project-tags">
-                                <li>25+ APIs</li>
-                                <li>3 Roles (Admin/Company/User)</li>
-                                <li>OTP</li>
-                                <li>Real-time chat</li>
-                                <li>Email notifications</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://yousefhdev.github.io/Job-Search-App/" target="_blank" class="btn-text">GitHub <i class="fab fa-github"></i></a>
-                            </div>
+                    <div class="skill-item">
+                        <span>MongoDB</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 88%"></div>
                         </div>
                     </div>
-                    
-                    <div class="project-card fade-in-up delay-1">
-                        <div class="project-content">
-                            <h3>Social Media Backend API</h3>
-                            <p>A robust backend powering a social media application.</p>
-                            <ul class="project-tags">
-                                <li>Modular Architecture</li>
-                                <li>File Upload</li>
-                                <li>GraphQL Dashboard</li>
-                                <li>Auth/Post/Comment</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://yousefhdev.github.io/Social-Media-App/" target="_blank" class="btn-text">GitHub <i class="fab fa-github"></i></a>
-                            </div>
+                    <div class="skill-item">
+                        <span>MySQL</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
                         </div>
                     </div>
-                    
-                    <div class="project-card fade-in-up delay-2">
-                        <div class="project-content">
-                            <h3>Saraha (Anonymous Messaging)</h3>
-                            <p>An anonymous messaging platform focused on privacy and security.</p>
-                            <ul class="project-tags">
-                                <li>Anonymous Messaging</li>
-                                <li>JWT Middleware</li>
-                                <li>Validation Layer</li>
-                                <li>Service-Controller Pattern</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://yousefhdev.github.io/Saraha-Anonymous-messages/" target="_blank" class="btn-text">GitHub <i class="fab fa-github"></i></a>
-                            </div>
+                    <div class="skill-item">
+                        <span>Mongoose</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">Experience</h2>
-                <div class="timeline">
-                    
-                    <div class="timeline-item fade-in-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2024 – Present</span>
-                            <h3>Independent Backend Engineer (Freelance)</h3>
-                            <ul>
-                                <li>Designed and implemented <strong>60+ RESTful endpoints</strong>.</li>
-                                <li>Implemented JWT and Role-Based Access Control (RBAC) for 3 different user roles.</li>
-                                <li>Optimized and improved <strong>10+ MongoDB schemas</strong> for better performance.</li>
-                            </ul>
+                    <div class="skill-item">
+                        <span>Schema Design</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 87%"></div>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item fade-in-up delay-1">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2023 – 2024</span>
-                            <h3>Backend Developer</h3>
-                            <span class="timeline-company">Job Platform Project</span>
-                            <ul>
-                                <li>Implemented the complete employment lifecycle within the backend.</li>
-                                <li>Developed OTP verification and password reset workflows with token expiration.</li>
-                                <li>Secured APIs utilizing Helmet, CORS, and rate limiting mechanisms.</li>
-                            </ul>
+                    <div class="skill-item">
+                        <span>Query Optimization</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 82%"></div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">Services</h2>
-                <div class="services-grid">
-                    
-                    <div class="service-card fade-in-up">
-                        <div class="service-icon"><i class="fas fa-sitemap"></i></div>
-                        <h3>Backend Architecture</h3>
-                        <p>Modular design and scalable APIs tailored for your business needs.</p>
+                <!-- Tools & Others -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools &amp; Others</h3>
                     </div>
-                    
-                    <div class="service-card fade-in-up delay-1">
-                        <div class="service-icon"><i class="fas fa-lock"></i></div>
-                        <h3>Security & Auth Setup</h3>
-                        <p>Implementing JWT, RBAC, encryption, and best security practices.</p>
-                    </div>
-                    
-                    <div class="service-card fade-in-up delay-2">
-                        <div class="service-icon"><i class="fas fa-comments"></i></div>
-                        <h3>Real-time Integration</h3>
-                        <p>Socket.IO integration for live chat and real-time data updates.</p>
-                    </div>
-                    
-                    <div class="service-card fade-in-up delay-3">
-                        <div class="service-icon"><i class="fas fa-database"></i></div>
-                        <h3>Database Engineering</h3>
-                        <p>MongoDB optimization, schema design, and query indexing.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Career Objective Section -->
-        <section class="objective section">
-            <div class="container">
-                <div class="objective-card fade-in-up">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <blockquote>
-                        Seeking a Full-Time On-Site backend engineering role where I can leverage my expertise in Node.js, distributed systems, and clean architecture to build high-performance platforms and solve complex challenges at scale.
-                    </blockquote>
-                    <i class="fas fa-quote-right quote-icon"></i>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">Get In Touch</h2>
-                <div class="contact-content">
-                    
-                    <div class="contact-info fade-in-up">
-                        <h3>Connect With Me</h3>
-                        <p>Feel free to reach out for collaborations, remote opportunities, or just to say hi!</p>
-                        
-                        <div class="contact-links">
-                            <a href="mailto:adhamh430@gmail.com" class="contact-item">
-                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                                <span>adhamh430@gmail.com</span>
-                            </a>
-                            <a href="https://github.com/YousefHDev" target="_blank" class="contact-item">
-                                <div class="contact-icon"><i class="fab fa-github"></i></div>
-                                <span>github.com/YousefHDev</span>
-                            </a>
-                            <a href="https://linkedin.com/in/yousef-hesham-416863319" target="_blank" class="contact-item">
-                                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-                                <span>linkedin.com/in/yousef-hesham-416863319</span>
-                            </a>
+                    <div class="skill-item">
+                        <span>Git / GitHub</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
                         </div>
                     </div>
-
-                    <div class="contact-form-container fade-in-up delay-1">
-                        <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (UI placeholder)');">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="john@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" rows="5" placeholder="Hello Yousef, I'd like to discuss..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fas fa-paper-plane"></i></button>
-                        </form>
+                    <div class="skill-item">
+                        <span>Socket.IO</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
                     </div>
-
+                    <div class="skill-item">
+                        <span>JWT / RBAC</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Docker (Basic)</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>AI-Assisted Development</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <a href="#home">YousefHDev<span>.</span></a>
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be injected by JavaScript -->
             </div>
-            <div class="footer-copy">
-                &copy; <span id="year">2025</span> Yousef Hesham. All rights reserved.
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+            <div class="timeline">
+                <!-- Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Independent Fullstack Engineer</h3>
+                        <h4>Freelance</h4>
+                        <ul>
+                            <li>
+                                Built responsive frontend interfaces using React.js with
+                                reusable components
+                            </li>
+                            <li>
+                                Designed and developed <strong>60+ RESTful APIs</strong>
+                            </li>
+                            <li>
+                                Implemented JWT Authentication, Role-Based Access Control
+                                (RBAC), and protected routes
+                            </li>
+                            <li>
+                                Designed MongoDB schemas and optimized database queries
+                            </li>
+                            <li>
+                                Built real-time chat and notification systems using
+                                Socket.IO
+                            </li>
+                            <li>
+                                Applied clean architecture and reusable component-based
+                                design
+                            </li>
+                            <li>
+                                Deployed applications using Vercel and Render
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Computer Science</h3>
+                        <h4>Arab Open University</h4>
+                        <p>Grade: B</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> ElSherouk, Egypt</p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-up">
-                <a href="#home" aria-label="Go to top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>
+                        End-to-end web applications using MERN stack with clean
+                        architecture and best practices.
+                    </p>
+                    <span class="service-tag">MERN · Clean Code</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>API Design &amp; Development</h3>
+                    <p>
+                        Scalable RESTful APIs and GraphQL endpoints with security best
+                        practices and documentation.
+                    </p>
+                    <span class="service-tag">REST · GraphQL · JWT</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Engineering</h3>
+                    <p>
+                        MongoDB schema design, data modeling, optimization, and
+                        migration strategies.
+                    </p>
+                    <span class="service-tag">MongoDB · MySQL</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Deployment &amp; DevOps</h3>
+                    <p>
+                        Application deployment on Vercel, Render, and cloud platforms
+                        with environment configuration.
+                    </p>
+                    <span class="service-tag">Vercel · Render · AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>
+                        Have a project in mind? I'd love to hear about it. Feel free to
+                        reach out using the form or through my contact details.
+                    </p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <a href="mailto:adhamh430@gmail.com"
+                            >adhamh430@gmail.com</a
+                            >
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span>Phone</span>
+                            <a href="tel:+201095419595">+20 109 541 9595</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span>Location</span>
+                            <span>Cairo, Egypt</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a
+                            href="https://linkedin.com/in/yousef-hesham-416863319"
+                            target="_blank"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a
+                            href="mailto:adhamh430@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your Name"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Your Email"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required />
+                    </div>
+                    <div class="form-group">
+                        <textarea
+                            id="message"
+                            placeholder="Your Message"
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Yousef <span>Hesham</span></h3>
+                    <p>Full Stack Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a
+                        href="https://linkedin.com/in/yousef-hesham-416863319"
+                        target="_blank"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/YousefHDev" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:adhamh430@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="currentYear"></span> Yousef Hesham. All rights
+                    reserved.
+                </p>
+                <p>Built with <i class="fas fa-heart"></i> and JavaScript</p>
             </div>
         </div>
     </footer>
