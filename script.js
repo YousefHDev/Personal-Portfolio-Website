@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
 
     // ============================================
-    // 6. PROJECTS DATA & RENDER
+    // 6. PROJECTS DATA & RENDER - UPDATED WITH IMAGES
     // ============================================
     const projects = [
         {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['React.js', 'CSS3', 'React Router', 'JavaScript'],
             liveUrl: 'https://dev-jobs-landing-page.vercel.app/',
             githubUrl: 'https://github.com/YousefHDev/DevJobs',
-            image: 'https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=DevJobs',
+            image: 'image/Screenshot 2026-08-06 185509.png',
         },
         {
             title: 'Movie Explorer',
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['React.js', 'Axios', 'OMDb API', 'LocalStorage'],
             liveUrl: 'https://movie-explorer-yhdev.vercel.app/',
             githubUrl: 'https://github.com/YousefHDev/Movie-Explorer',
-            image: 'https://via.placeholder.com/600x400/E50914/FFFFFF?text=Movie+Explorer',
+            image: 'image/Screenshot 2026-08-06 185619.png',
         },
     ];
 
