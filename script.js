@@ -144,31 +144,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     const projects = [
         {
-            title: 'Job Search App API',
+            title: 'PlayStation Cafe management System',
             description:
-                'Full backend system with 25+ API endpoints, JWT authentication, real-time chat and notifications with Socket.IO, and GraphQL admin dashboard.',
-            tech: ['Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'GraphQL'],
-            liveUrl: 'https://yousefhdev.github.io/Job-Search-App/',
-            githubUrl: 'https://github.com/YousefHDev/Job-Search-App',
-            image: 'https://via.placeholder.com/600x400/2563EB/FFFFFF?text=Job+Search+App',
+                'Full management dashboard for PlayStation cafes featuring real-time gaming station tracking, session billing, hourly rates, and admin controls.',
+            tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+            liveUrl: 'https://play-station-caf-management-system-one.vercel.app',
+            githubUrl: 'https://yousefhdev.github.io/PlayStation-Caf-Management-System/',
+            image: 'image/P1.png',
         },
         {
-            title: 'Social Media App',
+            title: 'VibeSpace-Social media Application',
             description:
                 'Modular social platform with 20+ API endpoints, JWT authentication, file upload handling, and GraphQL integration for optimized queries.',
             tech: ['Node.js', 'GraphQL', 'MongoDB', 'JWT', 'Multer'],
-            liveUrl: 'https://yousefhdev.github.io/Social-Media-App/',
-            githubUrl: 'https://github.com/YousefHDev/Social-Media-App',
-            image: 'https://via.placeholder.com/600x400/7C3AED/FFFFFF?text=Social+Media+App',
+            liveUrl: 'https://social-media-application-7jyg.vercel.app/',
+            githubUrl: 'https://yousefhdev.github.io/Social-Media-Application/',
+            image: 'image/CapturE.jpg',
         },
         {
             title: 'Saraha Anonymous Messages',
             description:
                 'Secure anonymous messaging backend with 15+ API endpoints, JWT authentication, user management, and clean service-controller pattern.',
             tech: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Validation'],
-            liveUrl: 'https://yousefhdev.github.io/Saraha-Anonymous-messages/',
+            liveUrl: 'https://saraha-anonymous-messages-platform-taupe.vercel.app',
             githubUrl: 'https://github.com/YousefHDev/Saraha-Anonymous-messages',
-            image: 'https://via.placeholder.com/600x400/EC4899/FFFFFF?text=Saraha',
+            image: 'image/Capture.png',
         },
         {
             title: 'DevJobs',
